@@ -1,0 +1,9 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.aws_ami.ubuntu" [label="data.aws_ami.ubuntu"];
+  "aws_instance.web_server" [label="aws_instance.web_server"];
+  "aws_security_group.web_sg" [label="aws_security_group.web_sg"];
+  "aws_instance.web_server" -> "data.aws_ami.ubuntu";
+  "aws_instance.web_server" -> "aws_security_group.web_sg";
+}
